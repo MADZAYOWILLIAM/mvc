@@ -33,7 +33,7 @@ class SignUp extends Controller
                 $this->view('sign_up');
                 return;
             }
-
+            //Password Matching
             if ($password !== $confirm) {
                 $_SESSION['flash'] = ['type' => 'error', 'message' => 'Passwords do not match.'];
                 $this->view('sign_up');
@@ -46,6 +46,7 @@ class SignUp extends Controller
             if (is_array($result) && array_key_exists('ok', $result)) {
                 if ($result['ok'] === true) {
                     $_SESSION['flash'] = ['type' => 'success', 'message' => 'Account created. Please log in.'];
+                    echo "Account Successfully Created";
                     // Redirect to login page
                     $this->redirect->to('login');
                     return;

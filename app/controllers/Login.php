@@ -40,20 +40,18 @@ class Login extends Controller
                 $_SESSION['user_id'] = $result['user']['id'];
                 $_SESSION['username'] = $result['user']['username'];
                 $_SESSION['logged_in'] = true;
-
-                error_log("Login successful, redirecting to home");
-                $_SESSION['flash'] = ['type' => 'success', 'message' => 'Login successful!'];
                 
-                // Direct redirect without method
-                header('Location: ' . baseUrl() . '/home', true, 302);
-                exit();
+                $_SESSION['flash'] = ['type' => 'success', 'message' => 'Login successful!'];
+
+                // Redirect to home page - this should work now
+                Redirect::to('home');
             } else {
                 // Login failed
                 $reason = isset($result['reason']) ? $result['reason'] : 'unknown';
-                $msg = $reason === 'user_not_found' 
-                    ? 'Username not found.' 
+                $msg = $reason === 'user_not_found'
+                    ? 'Username not found.'
                     : 'Invalid password.';
-                
+
                 $_SESSION['flash'] = ['type' => 'error', 'message' => $msg];
                 $this->view('login');
                 return;
@@ -65,17 +63,17 @@ class Login extends Controller
     }
 
 
-    
+
 
 
 
 
     // Redirect to a home page or dashboard after successful login
-    public function redirectToHome()
-    {
-        // Assuming you have a method to redirect to the home page
-        $this->redirect->to('home');
-    }
+    // public function redirectToHome()
+    // {
+    //     // Assuming you have a method to redirect to the home page
+    //     $this->redirect->to('home');
+    // }
 
 
     // Redirect to an error page if login fails
