@@ -1,5 +1,6 @@
 <?php
 
+
 class Login extends Controller
 {
     public $request;
@@ -40,7 +41,7 @@ class Login extends Controller
                 $_SESSION['user_id'] = $result['user']['id'];
                 $_SESSION['username'] = $result['user']['username'];
                 $_SESSION['logged_in'] = true;
-                
+
                 $_SESSION['flash'] = ['type' => 'success', 'message' => 'Login successful!'];
 
                 // Redirect to home page - this should work now

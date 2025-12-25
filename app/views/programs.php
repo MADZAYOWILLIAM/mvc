@@ -31,7 +31,7 @@
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </div>
                 <div class="title">
-                    <a href="../home.php" style="text-decoration:none;">
+                    <a href="home.php" style="text-decoration:none;">
                         <p>Empoweredge Club</p>
                     </a>
                 </div>
@@ -80,22 +80,22 @@
             <form id="programForm">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+                    <input type="text" id="name" class="form-input" name="full_name" placeholder="Enter your full name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" class="form-input" placeholder="Enter your phone number" required>
+                    <input type="tel" id="phone" class="form-input" name="phone" placeholder="Enter your phone number" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" class="form-input" placeholder="Enter your email address" required>
+                    <input type="email" id="email" class="form-input" name="email" placeholder="Enter your email address" required>
                 </div>
 
                 <div class="form-group">
                     <label for="program">Select Program</label>
-                    <select id="program" class="form-input" required>
+                    <select id="program" class="form-input" required name="programs">
                         <option value="" disabled selected>Choose a program</option>
                         <option value="youth_motivation">Youth Motivation</option>
                         <option value="community_development">Community Development</option>
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="checkbox-group">
-                    <input type="checkbox" id="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter">
                     <label for="newsletter">I agree to receive updates about programs and events</label>
                 </div>
 

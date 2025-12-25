@@ -16,9 +16,9 @@ class LoginModel
         $this->db->prepare("SELECT id, username, password FROM users WHERE username = :username");
         $this->db->bindValue(':username', $username);
         $this->db->execute();
-        
+
         $user = $this->db->fetch();
-        
+
         if (!$user) {
             return ['ok' => false, 'reason' => 'user_not_found'];
         }
@@ -34,6 +34,7 @@ class LoginModel
     public function validateInput($username, $password)
     {
         if (empty($username) || empty($password)) {
+           
             return false;
         }
         return true;
