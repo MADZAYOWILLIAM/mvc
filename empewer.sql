@@ -120,3 +120,35 @@ INSERT INTO program (title, description, service_id, duration_days, difficulty_l
 SELECT 'Database created successfully!' AS message;
 SELECT COUNT(*) as total_tables FROM information_schema.tables 
 WHERE table_schema = 'empoweredge';
+
+
+
+-- ============================================
+-- End of Script
+-- ============================================
+
+
+-- 1. Create the Users table first
+CREATE TABLE users (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL
+) ENGINE=InnoDB;
+
+-- 2. Create the Programs table with the EXACT same type for user_id
+CREATE TABLE programs (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL, -- This must match users.id exactly
+    program_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    phone_number VARCHAR(20) NOT NULL,
+    newsletter BOOLEAN DEFAULT FALSE,
+    description TEXT,
+    status ENUM('Pending','Approved','Completed') DEFAULT 'Pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_user_program
+        FOREIGN KEY (user_id)
+        REFERENCES users(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+) ENGINE=InnoDB;

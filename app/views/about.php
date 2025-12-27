@@ -22,34 +22,42 @@
                 </li>
                 <li><a href="programs.php">Programs</a></li>
                 <li><a href="./login.php">Login</a></li>
+
+                <li><a href="contact.php">
+                        <button class="btn">Contact Us</button>
+                    </a></li>
+
             </ul>
-            <button class="btn">Donate</button>
         </nav>
-        <div class="mobile">
-            <div class="burger-menu">
-                <div class="menu">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-                <div class="title">
-                    <a href="../home.php" style="text-decoration:none;">
-                        <p>Empoweredge Club</p>
-                    </a>
-                </div>
+        <div class="mobile-menu-overlay">
+            <div class="mobile">
+                <div class="burger-menu">
+                    <div class="menu">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">
+                        <a href="../home.php" style="text-decoration:none;">
+                            <p>Empoweredge Club</p>
+                        </a>
+                    </div>
 
 
+                </div>
             </div>
+
+            <div class="links">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="about.php">About</a>
+                    </li>
+                    <li><a href="programs.php">Programs</a></li>
+                    <li><a href="./login.php">Login</a></li>
+                </ul>
+            </div>
+
         </div>
 
-        <div class="links">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="services.php">Services</a></li>
-                <li><a href="about.php">About</a>
-                </li>
-                <li><a href="programs.php">Programs</a></li>
-                <li><a href="./login.php">Login</a></li>
-            </ul>
-        </div>
     </header>
     <div class="container mt-5">
         <h1>About Us</h1>
@@ -72,14 +80,14 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about.php">About</a></li>
-                    <li><a href="/Programs.php">Programs</a></li>
-                    <li><a href="/services.php">Services</a></li>
-                    <li><a href="/donate.php">Donate</a></li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="programs.php">Programs</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="donate.php">Donate</a></li>
 
 
-                    <li><a href="/enquiry.php">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
 
@@ -108,7 +116,9 @@
 
 
 
-    <script src="<?= baseUrl() ?>/public/assets/js/app.js"></script>
+    <script src="<?= baseUrl() ?>/public/assests/js/contact.js"></script>
+    <script src="<?php echo baseUrl() ?>/public/assests/js/mobile.js"></script>
+
 
 </body>
 

@@ -219,14 +219,14 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about.php">About</a></li>
-                    <li><a href="/Programs.php">Programs</a></li>
-                    <li><a href="/services.php">Services</a></li>
-                    <li><a href="/donate.php">Donate</a></li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="programs.php">Programs</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="donate.php">Donate</a></li>
 
 
-                    <li><a href="/enquiry.php">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
 
@@ -253,6 +253,7 @@
         </div>
     </footer>
     <script src="<?= baseUrl() ?>/public/assests/js/program.js"></script>
+    <script src="<?php echo baseUrl() ?>/public/assests/js/mobile.js"></script>
 
 </body>
 

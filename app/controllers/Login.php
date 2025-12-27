@@ -19,6 +19,7 @@ class Login extends Controller
     {
         // If POST, process login
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->request->data = $_POST;
             $username = trim($this->request->data('username') ?? '');
             $password = $this->request->data('password') ?? '';
 

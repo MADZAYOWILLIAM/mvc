@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="<?= baseUrl() ?>/public/assests/css/home2.css">
+    <link rel="stylesheet" href="<?= baseUrl() ?>/public/assests/css/footer.css">
+    <link rel="stylesheet" href="<?= baseUrl() ?>/public/assests/css/header.css">
     <title>Home</title>
     <style>
 
@@ -31,31 +33,35 @@
             </ul>
             <a href="./contact.php"><button class="btn">Contact Us</button></a>
         </nav>
-        <div class="mobile">
-            <div class="burger-menu">
-                <div class="menu">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-                <div class="title">
-                    <a href="../home.php" style="text-decoration:none;">
+        <div class="mobile-menu-overlay">
+            <div class="mobile" role="dialog" aria-modal="true">
+                <div class="burger-menu">
+                    <div class="menu">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">
+                        <!-- <a href="home.php" style="text-decoration:none;"> -->
                         <p>Empoweredge Club</p>
-                    </a>
+                        </a>
+                    </div>
+
+
                 </div>
-
-
             </div>
+
+            <div class="links">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="about.php">About</a>
+                    </li>
+                    <li><a href="programs.php">Programs</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
+            </div>
+
         </div>
 
-        <div class="links">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="services.php">Services</a></li>
-                <li><a href="about.php">About</a>
-                </li>
-                <li><a href="programs.php">Programs</a></li>
-                <li><a href="./login.php">Login</a></li>
-            </ul>
-        </div>
     </header>
 
     <section class="hero">
@@ -325,14 +331,14 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about.php">About</a></li>
-                    <li><a href="/Programs.php">Programs</a></li>
-                    <li><a href="/services.php">Services</a></li>
-                    <li><a href="/donate.php">Donate</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="programs.php">Programs</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="donate.php">Donate</a></li>
 
 
-                    <li><a href="/enquiry.php">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
 
@@ -409,6 +415,7 @@
             webDevCard.addEventListener('click', handleLinkClick);
         });
     </script>
+    <script src="<?php echo baseUrl() ?>/public/assests/js/mobile.js"></script>
 </body>
 
 </html>
